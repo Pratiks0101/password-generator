@@ -1,9 +1,8 @@
 body {
-    margin: auto;
+    margin: 0 auto;
     padding: 20px;
     height: 450px;
-    width: 450px;
-    text-align: justify;
+    max-width: 450px;
     background-color: #1F2937;
     color: white;
     text-align: center;
@@ -73,6 +72,19 @@ button:active {
     text-align: center;
 }
 
+.password-group{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.password-group button{
+    width: 150px;
+    text-align: center;
+    margin: 20px;
+}
+
 footer {
-    margin: 70px;
+    margin-top: 60px;
 }

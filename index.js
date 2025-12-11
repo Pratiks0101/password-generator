@@ -4,13 +4,13 @@ const characters =["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","
         "6","7", "8", "9","~","`","!","@","#","$","%","^","&","*","(",")","_","-","+","=","{",
         "[","}","]",",","|",":",";","<",">",".","?","/"];
 
-let inputEl1 = document.getElementById("input-el1")
-let inputEl2 = document.getElementById("input-el2")
+const inputEl1 = document.getElementById("input-el1")
+const inputEl2 = document.getElementById("input-el2")
 
 function generatePassword() {
     let passwordlength = 15;
-    let password1 = " ";
-    let password2 = " "
+    let password1 = "";
+    let password2 = ""
 
     for (let i = 0; i < passwordlength; i++) {
 
@@ -23,4 +23,20 @@ function generatePassword() {
         inputEl1.value = password1
         inputEl2.value = password2
     }
+}
+
+function copyBtn(inputElementId){
+    const inputEl = document.getElementById(inputElementId)
+    const passwordToCopy = inputEl.value
+    navigator.clipboard.writeText(passwordToCopy)
+    .then(function() {
+        console.log("Text copied too clipboard successfully");
+        
+        alert("Text copied too clipboard successfully " + passwordToCopy)
+    })
+    .catch(err =>{
+    console.error("Failed to copy", err);
+    alert("Failed to copy automatically, do the manual copy")
+    
+})
 }
