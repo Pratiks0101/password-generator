@@ -1,7 +1,7 @@
 body {
     margin: 0 auto;
     padding: 20px;
-    height: 450px;
+    height: auto;
     max-width: 450px;
     background-color: #1F2937;
     color: white;
@@ -35,6 +35,10 @@ button {
     font-family: 'Times New Roman', Times, serif;
     font-weight: 800;
     font-size: large;
+}
+
+button:hover {
+    background-color: #bfc8d4;
 }
 
 button:active {
@@ -78,6 +82,18 @@ button:active {
     margin: 20px;
 }
 
-footer {
-    margin-top: 60px;
+.icon-tray{
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+.icon-tray a{
+    font-size: 20px;
+    transition: transform 1s ease, color 1s ease;
+}
+
+.icon-tray a:hover{
+    color: #1DA1F2;
+    transform: translateY(-8px);
 }
